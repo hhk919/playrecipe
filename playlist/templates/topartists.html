@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %} topartists.html {% endblock %}
+{% block extra-style %}
+<link href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css" rel="stylesheet">
+{% endblock %}
+{% load playlistsfilter %}
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% if topartists %}
+    <h1>Topartists for {{ user }}</h1>
+    <br>
+    <table class="table table-bordered" data-height="500">
+        <thead>
+            <tr>
+                <th>RANK</th>
+                <th>POPULARITY</th>
+                <th>IMAGE</th>
+                <th>NAME</th>
+                <th>GENRE</th>
+                <th>FOLLOWERS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for topartist in topartists %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{topartist.popularity}}</td>
+                <td><img src="{{topartist.image}}" width="100px"/></td>
+                <td>{{topartist.name}}</td>
+                <td>{{topartist.genres|get_genre}}</td>
+                <td>{{topartist.followers}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <div class="offset-sm-2 col-sm-5">
+        {% if not request.session.access_token %}
+        <form action="../update/" method="post">
+        {% else %}
+        <form action="callback/" method="post">
+        {% endif %}
+        {% csrf_token %}
+            <input type="hidden" name="what" value="topartist"/>
+            <input type="submit" value="Refresh Your Topartists" class="btn btn-info"/>
+        </form>
+    </div>
+{% else %}
+    <h2>TOP 아티스트를 불러와주세요~</h2>
+    <div class="offset-sm-2 col-sm-5">
+        <form action="../update/" method="post">{% csrf_token %}
+        <input type="hidden" name="what" value="topartist"/>
+        <input type="submit" value="Call Your Topartists" class="btn btn-info"/>
+        </form>
+    </div>
+{% endif %}
+{% endblock %}

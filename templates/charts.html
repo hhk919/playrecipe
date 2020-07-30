@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}charts.html{% endblock %}
+{% block content %}
+
+<h1>{{ user }}'s Favourites </h1>
+<!-- chart -->
+<br>
+<div id="{{user}}"></div>
+<div id="canvas-holder" style="width:75%">
+    {% if fav_genres %}
+    <canvas id="chart-area-pie-genres"></canvas>
+    {% else %}
+    <h3> TOP아티스트를 업데이트 해주세요</h3>
+    {% endif %}
+    <br><br>
+    {% if fav_artists %}
+    <canvas id="chart-area-pie-artists"></canvas>
+    {% else %}
+    <h3> TOP트랙을 업데이트 해주세요</h3>
+    {% endif %}
+</div>
+<br><br>
+{% if topartists_avg and toptracks_avg %}
+<div id="container" style="width: 75%;">
+    <canvas id="canvas"></canvas>
+</div>
+{% else %}
+<h3>Top트랙과 Top아티스트를 업데이트 해주세요</h3>
+{% endif %}
+{% endblock %}
+{% block extra-script %}
+    <script src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script>
+    var topartists_avg = {{ topartists_avg }}
+    var toptracks_avg = {{ toptracks_avg }}
+
+    var gcolorArray = []
+    var glength = {{ fav_genres|length }}
+    for (var i=1; i < glength+1; i++) {
+        r = Math.floor(i*200/glength);
+        g = Math.floor(Math.random()*255);
+        b = Math.floor(Math.random()*255);
+        color = 'rgba('+r+','+g+','+b+',1)'
+        gcolorArray.push(color)
+    }
+
+    var acolorArray = []
+    var alength = {{ fav_artists|length }}
+    for (var i=1; i < alength+1; i++) {
+        r = Math.floor(i*200/alength);
+        g = Math.floor(Math.random()*255);
+        b = Math.floor(Math.random()*255);
+        color = 'rgba('+r+','+g+','+b+',1)'
+        acolorArray.push(color)
+    }
+
+
+    var pie_genres = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                {% for fav_genre in fav_genres %}
+                    {{ fav_genre.count }},
+                {% endfor %}
+                ],
+                backgroundColor: gcolorArray,
+                label: 'Favourite Genres'
+            },],
+            labels: [
+                {% for fav_genre in fav_genres %}
+                    '{{ fav_genre.genre|safe }}',
+                {% endfor %}
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: '{{user}}'+"'s favourite genres",
+                fontSize: 20
+            },
+        }
+    };
+
+    var pie_artists = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                {% for fav_artist in fav_artists %}
+                    {{ fav_artist.count }},
+                {% endfor %}
+                ],
+                backgroundColor: acolorArray,
+                label: 'Favourite Artists'
+            },],
+            labels: [
+                {% for fav_artist in fav_artists %}
+                    '{{ fav_artist.artist|safe }}',
+                {% endfor %}
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: '{{user}}'+"'s favourite artists",
+                fontSize: 20
+            },
+        }
+    };
+
+    window.onload = function() {
+        var ctx = document.getElementById('chart-area-pie-genres').getContext('2d');
+        window.myPie = new Chart(ctx, pie_genres);
+    };
+
+    window.addEventListener('load', function() {
+        var ctx = document.getElementById('chart-area-pie-artists').getContext('2d');
+        window.myPie = new Chart(ctx, pie_artists);
+        }
+    );
+
+	var color = Chart.helpers.color;
+    var barChartData = {
+        labels: ['Popularity'],
+        datasets: [{
+            label: 'Avg of Toptracks',
+            backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.red,
+            borderWidth: 1,
+            data: [
+                toptracks_avg,
+            ]
+        },{
+            label: 'Avg of Topartists',
+            backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+            borderColor: window.chartColors.blue,
+            borderWidth: 1,
+            data: [
+                topartists_avg,
+            ]
+        }]
+
+    };
+    window.addEventListener('load',function() {
+        var ctx = document.getElementById('canvas').getContext('2d');
+        window.myHorizontalBar = new Chart(ctx, {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                // Elements options apply to all of the options unless overridden in a dataset
+                // In this case, we are setting the border of each horizontal bar to be 2px wide
+                elements: {
+                    rectangle: {
+                        borderWidth: 2,
+                    }
+                },
+                responsive: true,
+                legend: {
+                    position: 'right',
+                },
+                title: {
+                    display: true,
+                    text: 'Avg. of Popularity of '+'{{user}}'+"'s trend",
+                    fontSize: 20
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            max: 100,
+                            min: 0,
+                        stepSize: 10
+                        }
+                    }]
+                }
+            }
+        });
+        }
+    );
+    </script>
+{% endblock %}

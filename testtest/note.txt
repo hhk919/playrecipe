@@ -1,0 +1,9 @@
+import requests
+import json
+endpoint = 'https://accounts.spotify.com/authorize'
+client_id = '55516dbf091346a4b1c201e04c2f0f5d'
+response_type = 'code'
+redirect_uri = 'http://localhost:63342/python_coding_practice/notepad/test.html'
+scope = 'user-read-email user-read-private'
+payload = {'client_id':client_id,'response_type':'code','redirect_uri':redirect_uri,'scope':scope}
+r = requests.get(endpoint,params=payload)

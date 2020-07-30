@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %} toptracks.html {% endblock %}
+{% block extra-style %}
+<link href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css" rel="stylesheet">
+{% endblock %}
+{% load playlistsfilter %}
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% if toptracks %}
+    <h1>Toptracks for {{ user }}</h1>
+    <br>
+    <table class="table table-bordered" data-height="500">
+        <thead>
+            <tr>
+              <th>RANK</th>
+              <th>POPULARITY</th>
+              <th>TITLE</th>
+              <th>ARTISTS</th>
+              <th>PREVIEW</th>
+            </tr>
+        </thead>
+        <tbody>
+           {% for toptrack in toptracks %}
+            <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{toptrack.popularity}}</td>
+            <td>{{toptrack.name}}</td>
+            <td>{{toptrack.artists|get_name|safe}}</td>
+            <td><a href="{{toptrack.preview_url}}" target="_blank"><img src="https://img.icons8.com/offices/30/000000/play.png"/></a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <div class="offset-sm-2 col-sm-5">
+        {% if not request.session.access_token %}
+        <form action="../update/" method="post">
+        {% else %}
+        <form action="callback/" method="post">
+        {% endif %}
+        {% csrf_token %}
+            <input type="hidden" name="what" value="toptrack"/>
+            <input type="submit" value="Refresh Your Toptracks" class="btn btn-info"/>
+        </form>
+    </div>
+{% else %}
+    <h2>TOP 트랙을 불러와주세요~</h2>
+    <div class="offset-sm-2 col-sm-5">
+        <form action="../update/" method="post">{% csrf_token %}
+        <input type="hidden" name="what" value="toptrack"/>
+        <input type="submit" value="Call Your Toptracks" class="btn btn-info"/>
+        </form>
+    </div>
+{% endif %}
+{% endblock %}

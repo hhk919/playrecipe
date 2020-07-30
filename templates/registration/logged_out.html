@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} logged_out.html {% endblock %}
+{% block content %}
+<h1>Logged Out</h1>
+<br>
+<div>
+   <img src="https://img.icons8.com/ios-filled/30/000000/quote-left.png"/>&ensp; Thanks for spending your quality time with this web site today. &ensp;<img src="https://img.icons8.com/ios-filled/30/000000/quote-right.png"/>
+</div>
+<p class="font-italic"><a href="{% url 'login' %}">Log in again</a></p>
+{% endblock %}

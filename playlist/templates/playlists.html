@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %} playlists.html {% endblock %}
+{% block extra-style %}
+<link href="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.css" rel="stylesheet">
+{% endblock %}
+{% load playlistsfilter %}
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% if playlists %}
+    <h1>Playlists of {{ user }}</h1>
+    <br>
+    {% for playlist in playlists %}
+    <img alt="" src="{{ playlist.image }}" width="150">
+    <div>name : <a href="{{ playlist.url }}">{{ playlist.name }}</a></div>
+    <div>description : {{ playlist.description }} </div>
+    <div>owner : {{ playlist.owner }}</div>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalTable_{{forloop.counter}}">
+        See Tracks of {{playlist.name}}
+    </button>
+    <div id="modalTable_{{forloop.counter}}" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{ playlist.name }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="table" data-toggle="table" data-height="500" data-search="true" data-pagination="true">
+                        <thead>
+                            <tr>
+                              <th>TITLE</th>
+                              <th>ARTISTS</th>
+                              <th>PREVIEW</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for track in playlist.tracks %}
+                            <tr>
+                            <td><a href="{{track.external_urls.spotify}}" target="_blank">{{track.name}}</a></td>
+                            <td>{{track.artists|get_name_w_url|safe}}</td>
+                            <td><a href="{{track.preview_url}}" target="_blank"><img src="https://img.icons8.com/offices/30/000000/play.png"/></a></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    {% endfor %}
+    <div class="offset-sm-2 col-sm-5">
+        {% if not request.session.access_token %}
+        <form action="update/" method="post">
+        {% else %}
+        <form action="callback/" method="post">
+        {% endif %}
+        {% csrf_token %}
+            <input type="hidden" name="what" value="playlist"/>
+            <input type="submit" value="Refresh Your Playlists" class="btn btn-info"/>
+        </form>
+    </div>
+{% else %}
+    <h2>플레이리스트를 불러와주세요~</h2>
+    <div class="offset-sm-2 col-sm-5">
+        <form action="update/" method="post">{% csrf_token %}
+        <input type="hidden" name="what" value="playlist"/>
+        <input type="submit" value="Call Your Playlists" class="btn btn-info"/>
+        </form>
+    </div>
+{% endif %}
+{% endblock %}
+{% block extra-script %}
+<script src="https://unpkg.com/bootstrap-table@1.17.1/dist/bootstrap-table.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+{% endblock %}
