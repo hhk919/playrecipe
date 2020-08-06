@@ -52,7 +52,12 @@
 {% else %}
     <h2>TOP 트랙을 불러와주세요~</h2>
     <div class="offset-sm-2 col-sm-5">
-        <form action="../update/" method="post">{% csrf_token %}
+        {% if user.is_authenticated %}
+        <form action="../update/" method="post">
+        {% else %}
+        <form action="../update/?what=toptrack" method="post">
+        {% endif %}
+	{% csrf_token %}
         <input type="hidden" name="what" value="toptrack"/>
         <input type="submit" value="Call Your Toptracks" class="btn btn-info"/>
         </form>

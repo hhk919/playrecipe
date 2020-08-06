@@ -54,7 +54,12 @@
 {% else %}
     <h2>TOP 아티스트를 불러와주세요~</h2>
     <div class="offset-sm-2 col-sm-5">
-        <form action="../update/" method="post">{% csrf_token %}
+        {% if user.is_authenticated %}
+        <form action="../update/" method="post">
+        {% else %}
+        <form action="../update/?what=topartist" method="post">
+        {% endif %}
+        {% csrf_token %}
         <input type="hidden" name="what" value="topartist"/>
         <input type="submit" value="Call Your Topartists" class="btn btn-info"/>
         </form>

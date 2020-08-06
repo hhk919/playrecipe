@@ -15,9 +15,9 @@ class PlaylistCallbackView(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         if 'access_token' not in self.request.session :
             code = self.request.GET.get('code', None)
-            result = upsert_playlists('http://localhost:8000/playlist/callback/', self.request, str(self.request.user), code)
+            result = upsert_playlists('http://15.164.50.5:8000/playlist/callback/', self.request, str(self.request.user), code)
         else:
-            result = upsert_playlists('http://localhost:8000/playlist/callback/', self.request, str(self.request.user))
+            result = upsert_playlists('http://15.164.50.5:8000/playlist/callback/', self.request, str(self.request.user))
 
         if result:
             messages.success(self.request, 'Update Successfully~')
@@ -34,9 +34,9 @@ class ToptracksCallbackView(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         if 'access_token' not in self.request.session :
             code = self.request.GET.get('code', None)
-            result = upsert_toptracks('http://localhost:8000/playlist/toptracks/callback/', self.request, str(self  .request.user), code)
+            result = upsert_toptracks('http://15.164.50.5:8000/playlist/toptracks/callback/', self.request, str(self  .request.user), code)
         else:
-            result = upsert_toptracks('http://localhost:8000/playlist/toptracks/callback/', self.request, str(self.request.user))
+            result = upsert_toptracks('http://15.164.50.5:8000/playlist/toptracks/callback/', self.request, str(self.request.user))
         if result:
             messages.success(self.request, 'Update Successfully~')
             return super().get_redirect_url(*args, **kwargs)
@@ -52,9 +52,9 @@ class TopartistsCallbackView(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         if 'access_token' not in self.request.session :
             code = self.request.GET.get('code', None)
-            result = upsert_topartists('http://localhost:8000/playlist/topartists/callback/', self.request, str(self.request.user), code)
+            result = upsert_topartists('http://15.164.50.5:8000/playlist/topartists/callback/', self.request, str(self.request.user), code)
         else:
-            result = upsert_topartists('http://localhost:8000/playlist/topartists/callback/', self.request, str(self.request.user))
+            result = upsert_topartists('http://15.164.50.5:8000/playlist/topartists/callback/', self.request, str(self.request.user))
 
         if result:
             messages.success(self.request, 'Update Successfully~')
@@ -77,14 +77,23 @@ class PlaylistView(View):
 class PlaylistUpdate(LoginRequiredMixin, RedirectView):
     permanent = True
 
+    def dispatch(self, request, *args, **kwargs):
+        if 'what' in self.request.GET:
+            kwargs['what'] = self.request.GET['what']
+        return super().dispatch(request,*args,**kwargs)
+
     def get_redirect_url(self, *args, **kwargs):
-        what = self.request.POST['what']
+        if 'what' in kwargs:
+            what = kwargs['what']
+        else:
+            what = self.request.POST['what']
+
         if what == 'playlist':
-            redirect_uri = 'http://localhost:8000/playlist/callback/'
+            redirect_uri = 'http://15.164.50.5:8000/playlist/callback/'
         elif what == 'toptrack':
-            redirect_uri = 'http://localhost:8000/playlist/toptracks/callback/'
+            redirect_uri = 'http://15.164.50.5:8000/playlist/toptracks/callback/'
         elif what == 'topartist':
-            redirect_uri = 'http://localhost:8000/playlist/topartists/callback/'
+            redirect_uri = 'http://15.164.50.5:8000/playlist/topartists/callback/'
 
         scope = 'playlist-read-private playlist-read-collaborative user-top-read'
         self.url = unquote(get_auth(redirect_uri, scope))

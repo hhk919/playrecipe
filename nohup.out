@@ -1,0 +1,470 @@
+Watching for file changes with StatReloader
+[31/Jul/2020 13:04:48] "GET / HTTP/1.1" 200 4952
+[31/Jul/2020 13:04:49] "GET /static/img/playlist_cover.jpg HTTP/1.1" 200 91601
+Not Found: /favicon.ico
+[31/Jul/2020 13:04:49] "GET /favicon.ico HTTP/1.1" 404 2695
+[31/Jul/2020 13:04:55] "GET /playlist/ HTTP/1.1" 200 4832
+[31/Jul/2020 13:04:56] "POST /playlist/update/?what=playlist HTTP/1.1" 302 0
+[31/Jul/2020 13:04:57] "GET /accounts/login/?next=/playlist/update/%3Fwhat%3Dplaylist HTTP/1.1" 200 5417
+[31/Jul/2020 13:05:00] "POST /accounts/login/ HTTP/1.1" 302 0
+[31/Jul/2020 13:05:00] "GET /playlist/update/?what=playlist HTTP/1.1" 301 0
+[31/Jul/2020 13:05:07] "GET /playlist/callback/?code=AQDUbWrDb-nE4LWLgdfEgh8dazZSkmvplOQKN8OqOrk7E746gzXNXgNg7fgkoUby0PTEqUAlLElxxoMX7ZMT5x50r1uctAR8wjn1zSfercPA_B2mqP-B4PCwItmBTUMsZOEhBaRAQFiK6CEfvqEM7widORzaWrMTzX-wlOh5joEzTft0kfH8KRm7iE2BTA4IJpi4_lRMo34ik4QWDgSm2kBUkjePB4O1J44JSiT_Dk-kTp_2xHHbl9SO138oh45TB4dM4Cxj-KqljJ4rZX6FcBQ HTTP/1.1" 301 0
+[31/Jul/2020 13:05:08] "GET /playlist/ HTTP/1.1" 200 161361
+[31/Jul/2020 13:05:10] "GET /playlist/toptracks/ HTTP/1.1" 200 12626
+[31/Jul/2020 13:05:14] "POST /playlist/toptracks/callback/ HTTP/1.1" 301 0
+[31/Jul/2020 13:05:14] "GET /playlist/toptracks/ HTTP/1.1" 200 12716
+[31/Jul/2020 13:05:17] "GET /playlist/topartists/ HTTP/1.1" 200 11750
+[31/Jul/2020 13:05:21] "GET /chart/ HTTP/1.1" 200 10139
+[31/Jul/2020 13:05:28] "GET /admin/ HTTP/1.1" 200 3329
+[31/Jul/2020 13:05:28] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[31/Jul/2020 13:05:28] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[31/Jul/2020 13:05:28] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18052
+[31/Jul/2020 13:05:28] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[31/Jul/2020 13:05:29] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[31/Jul/2020 13:05:29] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[31/Jul/2020 13:05:29] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[31/Jul/2020 13:05:29] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[31/Jul/2020 13:05:29] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[31/Jul/2020 13:05:29] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[31/Jul/2020 13:05:31] "GET /admin/auth/user/ HTTP/1.1" 200 7651
+[31/Jul/2020 13:05:31] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6190
+[31/Jul/2020 13:05:31] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[31/Jul/2020 13:05:31] "GET /static/admin/js/core.js HTTP/1.1" 200 5723
+[31/Jul/2020 13:05:31] "GET /admin/jsi18n/ HTTP/1.1" 200 8330
+[31/Jul/2020 13:05:31] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[31/Jul/2020 13:05:31] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[31/Jul/2020 13:05:31] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[31/Jul/2020 13:05:31] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[31/Jul/2020 13:05:31] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[31/Jul/2020 13:05:31] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+[31/Jul/2020 13:05:31] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[31/Jul/2020 13:05:31] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[31/Jul/2020 13:05:31] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[31/Jul/2020 13:05:31] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[31/Jul/2020 13:05:31] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[31/Jul/2020 13:05:36] "GET /admin/ HTTP/1.1" 200 3329
+[31/Jul/2020 13:05:41] "GET /accounts/logout/ HTTP/1.1" 200 4437
+[31/Jul/2020 13:05:43] "GET /accounts/login/ HTTP/1.1" 200 5386
+[31/Jul/2020 13:05:47] "POST /accounts/login/ HTTP/1.1" 302 0
+[31/Jul/2020 13:05:47] "GET / HTTP/1.1" 200 4966
+[31/Jul/2020 13:06:17] "GET / HTTP/1.1" 200 4952
+[31/Jul/2020 13:06:17] "GET /static/img/playlist_cover.jpg HTTP/1.1" 200 91601
+[31/Jul/2020 13:06:24] "GET /playlist/ HTTP/1.1" 200 4832
+[31/Jul/2020 13:06:28] "GET /playlist/toptracks/ HTTP/1.1" 200 4665
+[31/Jul/2020 13:06:31] "GET /playlist/topartists/ HTTP/1.1" 200 4682
+[31/Jul/2020 13:06:35] "GET /chart/ HTTP/1.1" 302 0
+[31/Jul/2020 13:06:35] "GET /accounts/login/?next=/chart/ HTTP/1.1" 200 5393
+[31/Jul/2020 13:06:38] "GET /playlist/ HTTP/1.1" 200 4832
+[31/Jul/2020 13:06:40] "GET / HTTP/1.1" 200 4952
+[31/Jul/2020 13:06:47] "GET /accounts/login/?next=/chart/ HTTP/1.1" 200 5393
+[31/Jul/2020 13:06:48] "GET /accounts/login/?next=/chart/ HTTP/1.1" 200 5393
+[31/Jul/2020 13:41:58] "GET /playlist/ HTTP/1.1" 200 161269
+[31/Jul/2020 13:59:56] "GET /playlist/ HTTP/1.1" 200 161269
+[31/Jul/2020 13:59:58] "GET / HTTP/1.1" 200 4966
+[31/Jul/2020 14:00:03] "GET /accounts/logout/ HTTP/1.1" 200 4437
+[31/Jul/2020 14:00:07] "GET /chart/ HTTP/1.1" 302 0
+[31/Jul/2020 14:00:07] "GET /accounts/login/?next=/chart/ HTTP/1.1" 200 5393
+[31/Jul/2020 14:00:11] "POST /accounts/login/ HTTP/1.1" 302 0
+[31/Jul/2020 14:00:11] "GET /chart/ HTTP/1.1" 200 10135
+[31/Jul/2020 14:04:36] "GET /playlist/ HTTP/1.1" 200 161269
+[31/Jul/2020 14:04:38] "POST /playlist/update/ HTTP/1.1" 301 0
+[31/Jul/2020 14:04:43] "GET /playlist/callback/?code=AQBJem7Y0EY8m2d0ais6M2kKKi5RivHa1BjwzmDAy_0XGaZdHc3POyPRdAcwqoM_g_V8SKM25kpXA0bcvtF5IEi9VnrkKE9AIFQOj2ozEBlKazmMt_B5s5tJE9VDHk84w3BAzslw621fwx1DbluCznqja9DIpO3YYcjBbjFMpogwAXBw-rd4BZ-wnzh3rmdrbjXgRfVIUm_MMi8Z6CvtclHVpvdEz1bOZmlZ6ExXYGDOXU0bbR1xPyK9oYn3fyw0Am4s18v3Sw9bUaOIYYS7ux4 HTTP/1.1" 301 0
+[31/Jul/2020 14:04:43] "GET /playlist/ HTTP/1.1" 200 161361
+[31/Jul/2020 14:04:48] "GET /playlist/toptracks/ HTTP/1.1" 200 12626
+[31/Jul/2020 14:04:56] "GET /playlist/topartists/ HTTP/1.1" 200 11750
+[31/Jul/2020 14:05:01] "GET /chart/ HTTP/1.1" 200 10135
+[31/Jul/2020 14:05:18] "GET /admin/ HTTP/1.1" 200 3329
+[31/Jul/2020 14:17:42] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('176.126.175.10', 51376)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[31/Jul/2020 18:21:35] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('223.12.74.77', 15009)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[31/Jul/2020 18:21:37] "GET / HTTP/1.1" 200 4952
+Not Found: /common/info.cgi
+WARNING:django.request:Not Found: /common/info.cgi
+[31/Jul/2020 18:21:49] "GET /common/info.cgi HTTP/1.1" 404 2707
+Not Found: /hnap/hnap_service
+WARNING:django.request:Not Found: /hnap/hnap_service
+[31/Jul/2020 18:21:53] "GET /hnap/hnap_service HTTP/1.1" 404 2713
+Not Found: /stssys.htm
+WARNING:django.request:Not Found: /stssys.htm
+[31/Jul/2020 18:21:57] "GET /stssys.htm HTTP/1.1" 404 2692
+Not Found: /index.asp
+WARNING:django.request:Not Found: /index.asp
+[31/Jul/2020 18:22:01] "GET /index.asp HTTP/1.1" 404 2689
+Not Found: /login.htm
+WARNING:django.request:Not Found: /login.htm
+[31/Jul/2020 18:22:05] "GET /login.htm HTTP/1.1" 404 2689
+[31/Jul/2020 18:22:09] "GET / HTTP/1.1" 200 4952
+Not Found: /webpages/login.html
+WARNING:django.request:Not Found: /webpages/login.html
+[31/Jul/2020 18:22:12] "GET /webpages/login.html HTTP/1.1" 404 2719
+[31/Jul/2020 18:22:18] "GET / HTTP/1.1" 200 4952
+Not Found: /weblogin.htm
+WARNING:django.request:Not Found: /weblogin.htm
+[31/Jul/2020 18:22:21] "GET /weblogin.htm HTTP/1.1" 404 2698
+[31/Jul/2020 18:27:42] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[31/Jul/2020 18:27:42] "  /*à     Cookie: mstshash=Administr" 400 -
+[31/Jul/2020 20:40:43] "GET / HTTP/1.1" 200 4952
+[31/Jul/2020 23:44:37] "GET / HTTP/1.1" 200 4966
+[31/Jul/2020 23:44:38] "GET /static/img/playlist_cover.jpg HTTP/1.1" 304 0
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[31/Jul/2020 23:44:38] "GET /favicon.ico HTTP/1.1" 404 2695
+[31/Jul/2020 23:44:40] "GET /accounts/logout/ HTTP/1.1" 200 4437
+[31/Jul/2020 23:44:44] "GET / HTTP/1.1" 200 4952
+[31/Jul/2020 23:44:46] "GET /chart/ HTTP/1.1" 302 0
+[31/Jul/2020 23:44:46] "GET /accounts/login/?next=/chart/ HTTP/1.1" 200 5393
+[31/Jul/2020 23:44:52] "POST /accounts/login/ HTTP/1.1" 302 0
+[31/Jul/2020 23:44:52] "GET /chart/ HTTP/1.1" 200 10140
+[31/Jul/2020 23:44:54] "GET /accounts/logout/ HTTP/1.1" 200 4437
+[31/Jul/2020 23:44:55] "GET /chart/ HTTP/1.1" 302 0
+[31/Jul/2020 23:44:55] "GET /accounts/login/?next=/chart/ HTTP/1.1" 200 5393
+[31/Jul/2020 23:44:56] "GET /accounts/register/ HTTP/1.1" 200 5579
+[31/Jul/2020 23:45:12] "POST /accounts/register/ HTTP/1.1" 302 0
+[31/Jul/2020 23:45:12] "GET /accounts/register/done/ HTTP/1.1" 200 4248
+[31/Jul/2020 23:45:15] "GET /playlist/ HTTP/1.1" 200 4832
+[31/Jul/2020 23:45:18] "GET /accounts/login/ HTTP/1.1" 200 5386
+[31/Jul/2020 23:45:23] "POST /accounts/login/ HTTP/1.1" 302 0
+[31/Jul/2020 23:45:23] "GET / HTTP/1.1" 200 4966
+[31/Jul/2020 23:45:25] "GET /playlist/toptracks/ HTTP/1.1" 200 4665
+[31/Jul/2020 23:45:27] "GET /chart/ HTTP/1.1" 200 8598
+[31/Jul/2020 23:46:30] "GET /accounts/logout/ HTTP/1.1" 200 4437
+[31/Jul/2020 23:46:34] "GET / HTTP/1.1" 200 4952
+[01/Aug/2020 01:52:06] "GET / HTTP/1.1" 200 4952
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[01/Aug/2020 01:52:06] "GET /favicon.ico HTTP/1.1" 404 2695
+[01/Aug/2020 01:52:34] "GET / HTTP/1.1" 200 4952
+[01/Aug/2020 05:26:50] "GET / HTTP/1.1" 200 4952
+[01/Aug/2020 06:07:31] "GET / HTTP/1.1" 200 4952
+[01/Aug/2020 06:49:28] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Sé\x1aú\x02\x96Z\x10íé1¬')
+[01/Aug/2020 06:49:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: '87204879'. You may need to add '87204879' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '87204879'. You may need to add '87204879' to ALLOWED_HOSTS.
+Bad Request: /
+WARNING:django.request:Bad Request: /
+[01/Aug/2020 11:18:24] "GET / HTTP/1.1" 400 61340
+[01/Aug/2020 13:22:33] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('176.126.175.10', 50936)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Invalid HTTP_HOST header: '87204879'. You may need to add '87204879' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '87204879'. You may need to add '87204879' to ALLOWED_HOSTS.
+Bad Request: /
+WARNING:django.request:Bad Request: /
+[01/Aug/2020 16:53:43] "GET / HTTP/1.1" 400 61340
+[01/Aug/2020 21:43:04] "GET / HTTP/1.1" 200 4952
+[02/Aug/2020 03:26:26] "GET / HTTP/1.1" 200 4952
+[02/Aug/2020 04:42:47] code 400, message Bad HTTP/0.9 request type ('Z¥\x01')
+[02/Aug/2020 04:42:47] "Z¥     " 400 -
+[02/Aug/2020 05:03:15] code 400, message Bad HTTP/0.9 request type ('Z¥\x01')
+[02/Aug/2020 05:03:15] "Z¥     " 400 -
+[02/Aug/2020 11:03:55] "GET / HTTP/1.1" 200 4952
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[02/Aug/2020 11:03:56] "GET /favicon.ico HTTP/1.1" 404 2695
+[02/Aug/2020 11:04:06] "GET / HTTP/1.1" 200 4952
+[02/Aug/2020 14:52:52] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[02/Aug/2020 14:52:52] "  /*à     Cookie: mstshash=Administr" 400 -
+Invalid HTTP_HOST header: 'example.com'. You may need to add 'example.com' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: 'example.com'. You may need to add 'example.com' to ALLOWED_HOSTS.
+Bad Request: /http:/example.com/
+WARNING:django.request:Bad Request: /http:/example.com/
+[02/Aug/2020 21:44:24] code 400, message Bad request version ('ÏËeí\x92¢Þ\x00\x00\x88À0À,À(À$À\x14À')
+[02/Aug/2020 21:44:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[02/Aug/2020 21:44:24] code 400, message Bad request version ('â£\x87ª}X\x00\x00\x88À0À,À(À$À\x14À')
+[02/Aug/2020 21:44:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[02/Aug/2020 21:44:24] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Æ\x01\x00\x00Â\x03\x02î\x95Þ\x19\x14øò\x9d.\x97\x02Îð±º¼£ýùõú¤BÁ\x04')
+[02/Aug/2020 21:44:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[02/Aug/2020 21:44:24] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00Æ\x01\x00\x00Â\x03\x01FÓÓáuR©~\x0fSþ'j[")
+[02/Aug/2020 21:44:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('164.52.24.172', 38565)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 172, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[02/Aug/2020 21:44:27] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('164.52.24.172', 49474)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[03/Aug/2020 00:30:03] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('176.126.175.10', 44350)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add 'www.baidu.com' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add 'www.baidu.com' to ALLOWED_HOSTS.
+Bad Request: /www.baidu.com:443
+WARNING:django.request:Bad Request: /www.baidu.com:443
+[03/Aug/2020 04:00:56] "CONNECT www.baidu.com:443 HTTP/1.0" 400 61731
+Invalid HTTP_HOST header: '123.125.114.144'. You may need to add '123.125.114.144' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: '123.125.114.144'. You may need to add '123.125.114.144' to ALLOWED_HOSTS.
+Bad Request: /http:/123.125.114.144/
+WARNING:django.request:Bad Request: /http:/123.125.114.144/
+[03/Aug/2020 05:08:16] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('176.126.175.10', 55194)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[03/Aug/2020 07:54:31] "GET / HTTP/1.1" 200 4952
+[03/Aug/2020 08:00:07] "GET / HTTP/1.1" 200 4952
+[03/Aug/2020 15:37:07] "GET / HTTP/1.1" 200 4952
+[03/Aug/2020 15:37:08] "GET /static/img/playlist_cover.jpg HTTP/1.1" 304 0
+Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+[03/Aug/2020 15:37:08] "GET /favicon.ico HTTP/1.1" 404 2695
+[03/Aug/2020 15:37:13] "GET / HTTP/1.1" 200 4952
+[03/Aug/2020 15:37:15] "GET /playlist/ HTTP/1.1" 200 4832
+[03/Aug/2020 15:37:17] "POST /playlist/update/?what=playlist HTTP/1.1" 302 0
+[03/Aug/2020 15:37:17] "GET /accounts/login/?next=/playlist/update/%3Fwhat%3Dplaylist HTTP/1.1" 200 5417
+[03/Aug/2020 15:37:21] "POST /accounts/login/ HTTP/1.1" 302 0
+[03/Aug/2020 15:37:21] "GET /playlist/update/?what=playlist HTTP/1.1" 301 0
+[03/Aug/2020 15:37:25] "GET /playlist/callback/?code=AQCsNuKuKH0yxiAZ-ZHb34MGn2kK5vfRMuDDjd06xxkiPdb5TEfbFJ2NdCV5bcqena1m2YzLSnjqMW30ZlUzgCsRrfrlazZJfm1OZfecT964m44DsbGzBzioNnHCPHFaUXKQ424a0XUaJSNC_KLQEWZIqfi69QXTkJVCEYkqFtNsB-LlSDJhXv96s-I-pVA-oJP5owOera8p91AwNmFUuA2NScjwFNk5aUgG5pWgrN1uhbGsPrupFL8gIoWlu0PGlb0WL9pxDZi7Xzkt2wg8cv8 HTTP/1.1" 301 0
+[03/Aug/2020 15:37:26] "GET /playlist/ HTTP/1.1" 200 161580
+[03/Aug/2020 15:37:46] "GET /accounts/logout/ HTTP/1.1" 200 4437
+[04/Aug/2020 02:24:20] code 400, message Bad request version ('À\x14À')
+[04/Aug/2020 02:24:20] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Aug/2020 03:39:29] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x81e1\x92\x9c};Ñí(\x86MÓj-\x9f\x95b$[Ú\x07\x9eJ7àò<!¸ôd')
+[04/Aug/2020 03:39:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Aug/2020 06:58:47] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('176.126.175.10', 55494)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[04/Aug/2020 07:02:32] code 400, message Bad request version ('#Âñ¸')
+[04/Aug/2020 07:02:32] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[04/Aug/2020 09:39:05] "GET / HTTP/1.1" 200 4952
+[04/Aug/2020 09:46:08] "GET / HTTP/1.1" 200 4952
+[04/Aug/2020 11:32:23] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x03\x00\x00\x00')
+[04/Aug/2020 11:32:23] "  à          " 400 -
+[04/Aug/2020 21:54:03] code 400, message Bad request syntax ('\x04\x01\x00\x19h/\x11¡\x00')
+[04/Aug/2020 21:54:03] " h/¡ " 400 -
+[2020-08-04 21:54:03,627] - Broken pipe from ('80.82.65.74', 34154)
+
+[04/Aug/2020 21:55:03] code 400, message Bad request syntax ('\x05\x01\x00')
+[04/Aug/2020 21:55:03] " " 400 -
+[2020-08-04 21:55:03,900] - Broken pipe from ('80.82.65.74', 47802)
+
+[04/Aug/2020 21:56:04] code 400, message Bad request syntax ('\x05\x01\x00')
+[04/Aug/2020 21:56:04] " " 400 -
+[2020-08-04 21:56:04,166] - Broken pipe from ('80.82.65.74', 56186)
+
+[05/Aug/2020 04:40:09] "GET / HTTP/1.1" 200 4952
+[05/Aug/2020 10:43:37] code 400, message Bad request version ('F\x07\x00tsXrcsXYs9\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00bbXcsXctst\x00\x00\x00\x00\x00\x00')
+[05/Aug/2020 10:43:37] "   TZ          0I    ¨À )t F tsXrcsXYs9                      bbXcsXctst      " 400 -
+[05/Aug/2020 10:43:37] "GET / HTTP/1.1" 200 4952
+Invalid HTTP_HOST header: 'ip-172-31-41-133.ap-northeast-2.compute.internal:8000'. You may need to add 'ip-172-31-41-133.ap-northeast-2.compute.internal' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: 'ip-172-31-41-133.ap-northeast-2.compute.internal:8000'. You may need to add 'ip-172-31-41-133.ap-northeast-2.compute.internal' to ALLOWED_HOSTS.
+Bad Request: /
+WARNING:django.request:Bad Request: /
+[05/Aug/2020 11:33:10] "GET / HTTP/1.0" 400 61395
+[05/Aug/2020 11:33:12] "GET / HTTP/1.1" 200 4952
+[05/Aug/2020 19:37:36] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('89.248.174.166', 52410)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[05/Aug/2020 19:52:11] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x03\x00\x00\x00')
+[05/Aug/2020 19:52:11] "  à          " 400 -
+[05/Aug/2020 21:15:16] code 400, message Bad request version ('À\x14À')
+[05/Aug/2020 21:15:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: 'ip.ws.126.net:443'. You may need to add 'ip.ws.126.net' to ALLOWED_HOSTS.
+ERROR:django.security.DisallowedHost:Invalid HTTP_HOST header: 'ip.ws.126.net:443'. You may need to add 'ip.ws.126.net' to ALLOWED_HOSTS.
+Bad Request: /ip.ws.126.net:443
+WARNING:django.request:Bad Request: /ip.ws.126.net:443
+[05/Aug/2020 21:42:43] "CONNECT ip.ws.126.net:443 HTTP/1.1" 400 61400
+[05/Aug/2020 23:03:10] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('192.35.168.220', 35718)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 172, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[06/Aug/2020 05:38:33] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('192.35.168.220', 51372)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[06/Aug/2020 05:38:33] "GET / HTTP/1.1" 200 4952
+[06/Aug/2020 06:38:04] "GET / HTTP/1.1" 200 4952
+----------------------------------------
+Exception happened during processing of request from ('89.248.174.166', 39282)
+Traceback (most recent call last):
+  File "/usr/lib64/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 174, in handle
+    self.handle_one_request()
+  File "/srv/playrecipe/myvenv/lib64/python3.7/site-packages/django/core/servers/basehttp.py", line 182, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[06/Aug/2020 07:02:00] "GET / HTTP/1.1" 200 4952
+[06/Aug/2020 07:19:22] code 400, message Bad request syntax ('\x16\x03\x01\x00¼\x01\x00\x00¸\x03\x03û\x9f4Ô')
+[06/Aug/2020 07:19:22] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[06/Aug/2020 14:01:44] "GET / HTTP/1.1" 200 4952
+[06/Aug/2020 16:18:34] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[06/Aug/2020 16:18:34] "  /*à     Cookie: mstshash=Administr" 400 -
