@@ -6,19 +6,19 @@ from datetime import datetime
 
 
 def get_mongodb_connection():
-    conn = MongoHook(conn_id='playrecipe_mongo').get_conn()
+    conn = MongoHook(conn_id='playrecipe_mongo')
     return conn
 
 
 def extract(collection_name):
-    collection = get_mongodb_connection().get_database('playrecipe').get_collection(collection_name)
+    conn = get_mongodb_connection()
     logging.info("Extract started")
     pipeline = [{"$unwind": "$playlists"}, {"$unwind": "$playlists.tracks"},
                 {"$group": {"_id": {"id": "$playlists.tracks.id", "name": "$playlists.tracks.name",
                                     "artists": "$playlists.tracks.artists.name"}, "total": {"$sum": 1}}},
                 {"$project": {"_id": 0, "name": "$_id.name", 'artists': '$_id.artists', "total": 1}},
                 {"$sort": {"total": -1, "name": 1}}, {"$limit": 50}]
-    results = collection.aggregate(pipeline=pipeline)
+    results = conn.aggregate(mongo_db='playrecipe', mongo_collection=collection_name, aggregate_query=pipeline)
     logging.info("Extract done")
     return results
 
@@ -31,11 +31,12 @@ def transform(docs):
 
 
 def load(docs,collection_name):
-    collection = get_mongodb_connection().get_database('playrecipe').get_collection(collection_name)
+    conn = get_mongodb_connection()
+    collection = conn.get_conn().get_database('playrecipe').get_collection(collection_name)
     logging.info("Load started")
     before = collection.count_documents({})
     logging.info('before insert', before)
-    collection.insert_many(docs)
+    conn.insert_many(collection_name,docs,mongo_db='playrecipe')
     after = collection.count_documents({})
     logging.info(after, 'documents inserted')
     logging.info('Load stopped')
@@ -45,9 +46,9 @@ def etl():
     # execution_date = context['execution_date']
     # task_instance = context['task_instance']
     logging.info('ETL started')
-    extracted = extract('playlist')
+    extracted = extract(collection_name='playlists')
     transformed = transform(extracted)
-    load(transformed,'mostchoicetracks')
+    load(docs=transformed,collection_name='mostchoicetracks')
     logging.info('etl done')
 
 
@@ -61,6 +62,6 @@ mostchioce = DAG(
 task = PythonOperator(
     task_id='most_choice_tracks',
     python_callable=etl,
-#     provide_context=True,
+    provide_context=True,
     dag=mostchioce
 )
