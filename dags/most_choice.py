@@ -62,6 +62,6 @@ mostchioce = DAG(
 task = PythonOperator(
     task_id='most_choice_tracks',
     python_callable=etl,
-    provide_context=True,
+#     provide_context=True,
     dag=mostchioce
 )
